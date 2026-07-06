@@ -1,0 +1,29 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "grasv"
+version = "0.1.0"
+description = "GraSV: graph-based structural variant inference from long-read signals."
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+  "numpy>=1.23,<2",
+  "scipy>=1.9",
+  "scikit-learn>=1.2",
+  "torch>=2.0",
+  "pysam>=0.21",
+  "tqdm>=4.64",
+]
+
+[project.optional-dependencies]
+test = [
+  "pytest>=7",
+]
+
+[project.scripts]
+grasv = "grasv.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]

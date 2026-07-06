@@ -1,0 +1,31 @@
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.venv/
+venv/
+build/
+dist/
+*.egg-info/
+
+# Runtime outputs
+outputs/
+results/
+evaluations/
+training/
+*.log
+*.jsonl
+*.vcf
+*.vcf.gz
+*.vcf.gz.tbi
+*.bam
+*.bai
+*.cram
+*.crai
+
+# Large local artifacts. The small default checkpoints in models/ are intended
+# to be versioned for out-of-the-box inference.
+pkls/
+weights/
+*.tar.gz
